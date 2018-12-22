@@ -1,41 +1,112 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:3003/Yelp');
+
+mongoose.connect('mongodb://localhost:27017/Yelp');
 const db = mongoose.connection;
 const Schema = mongoose.Schema;
 
-db.on('error', 
-console.error.bind(console, 'MongoDB connection error:'));
-db.once('open', function() {
-  console.log('Connected to MongoDB')
-});
+db.on('error',
+  console.error.bind(console, 'MongoDB connection error:'));
+db.once('open',
+  () => {
+    console.log('Connected to MongoDB');
+  });
 
-let restId = ObjectId();
-
-let infoSchema = new Schema({
-  restaurantInfo: {
-    _id: restId,
+const infoSchema = new Schema({
+    restId: { type: Number, unique: true },
     rest_name: String,
-    category: Array,
+    price_point: Number,
+    category: String,
     address: {
       street: String,
       city: String,
-      state: {type: String, max: 2},
-      zip: {type: Number, max: 5}
+      state: String,
+      zip: String,
     },
-    phone: {type: String, min: 7, max: 14}
-  }
-})
-
-let reviewSchema = new Schema({
-  reviews: {
-    _id: ObjectId(),
-    rating: {
-      stars: {type: Number, min: 1, max: 5},
-      rest_id: restId,
-      created_at: {type: Number, default: Date.now}
+    phone: String,
+    totalReviews: {
+      total: Number,
+      five: Number,
+      four: Number,
+      three: Number,
+      two: Number,
+      one: Number 
+    },
+    reviewHistory: {
+      2018: {
+        jan: Number,
+        feb: Number,
+        mar: Number,
+        apr: Number,
+        may: Number,
+        jun: Number,
+        jul: Number,
+        aug: Number,
+        sep: Number,
+        oct: Number,
+        nov: Number,
+        dec: Number 
+      },
+      2017: {
+        jan: Number,
+        feb: Number,
+        mar: Number,
+        apr: Number,
+        may: Number,
+        jun: Number,
+        jul: Number,
+        aug: Number,
+        sep: Number,
+        oct: Number,
+        nov: Number,
+        dec: Number 
+      },
+      2016: {
+        jan: Number,
+        feb: Number,
+        mar: Number,
+        apr: Number,
+        may: Number,
+        jun: Number,
+        jul: Number,
+        aug: Number,
+        sep: Number,
+        oct: Number,
+        nov: Number,
+        dec: Number 
+      },
+      2015: {
+        jan: Number,
+        feb: Number,
+        mar: Number,
+        apr: Number,
+        may: Number,
+        jun: Number,
+        jul: Number,
+        aug: Number,
+        sep: Number,
+        oct: Number,
+        nov: Number,
+        dec: Number  
+      },
+      2014: {
+        jan: Number,
+        feb: Number,
+        mar: Number,
+        apr: Number,
+        may: Number,
+        jun: Number,
+        jul: Number,
+        aug: Number,
+        sep: Number,
+        oct: Number,
+        nov: Number,
+        dec: Number 
+      }
     }
-  }
-})
+});
 
-const Info = mongoose.model('Yelp', infoSchema);
-const Review = mongoose.model('Yelp', reviewSchema);
+const Info = mongoose.model('restaurant_info', infoSchema);
+
+module.exports = {
+  Info,
+};
