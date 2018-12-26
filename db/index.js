@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/Yelp');
+mongoose.connect('mongodb://localhost:27017/Yelp', { useNewUrlParser: true });
 const db = mongoose.connection;
 const Schema = mongoose.Schema;
 
