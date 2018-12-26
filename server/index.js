@@ -15,8 +15,10 @@ app.get('/', (req, res) => {
 app.get('/restaurants/:restId', (req, res) => {
   // let restaurantId = req.params.
   db.Info.find({restId: req.params.restId}, (err, data) => {
-    if (err) throw err;
-    res.send(data);
+    if (err) {
+      res.status(500).json({ error: "Error in server"});
+    }
+    res.status(201).json(data);
   })
   // res.send('Given ID is: ' + restaurantId)
   // console.log(res);
