@@ -18,15 +18,13 @@ app.get('/restaurants/:restId', (req, res) => {
     if (err) {
       res.status(500).json({ error: "Error in server"});
     }
-    res.status(201).json(data);
+    res.status(200).json(data);
   })
   // res.send('Given ID is: ' + restaurantId)
   // console.log(res);
 })
 
-
-
-
-
 const port = 3003;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
+
+module.exports = app;
