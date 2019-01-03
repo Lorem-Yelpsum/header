@@ -2,7 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App.jsx';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('header')
-)
+window.Header = App;  
+
+window.React = React;
+
+window.ReactDOM = ReactDOM;
+
+// ReactDOM.render(
+//   <App />,
+//   document.getElementById('header')
+// )
