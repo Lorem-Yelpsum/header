@@ -60,10 +60,11 @@ typings/
 # next.js build output
 .next
 
-bundle.js
+dist
 
 .DS_Store
 
 client/dist/style.css
 client/src/components/Portal.jsx
 client/src/components/ModalController.jsx
+bundle.js
