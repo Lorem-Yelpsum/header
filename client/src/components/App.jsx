@@ -6,6 +6,11 @@ import Share from './Share/Share.jsx';
 import Save from './Save/Save.jsx';
 import WriteReview from './WriteReview/WriteReview.jsx';
 import MapBox from './MapBox/MapBox.jsx';
+import BizInfo from './BizInfo/BizInfo.jsx';
+import CSSModules from 'react-css-modules';
+import style from './app.css';
+
+
 
 
 class App extends React.Component {
@@ -21,7 +26,6 @@ class App extends React.Component {
 
   componentDidMount() {
     let getRoute = window.restId !== undefined ? `/restaurants/${window.restId}` : `/restaurants/1`;
-    // console.log(getRoute)
     fetch(getRoute)
     .then(response => {
       return response.json();
@@ -33,7 +37,6 @@ class App extends React.Component {
   }
 
   handleShow() {
-    console.log('here');
     this.setState({showModal: true});
   }
   
@@ -44,16 +47,29 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="header">
-        {/* <Portal /> */}
-        <Save />
-        <Share />
-        <AddPhoto />
-        <WriteReview onClick={this.handleShow}></WriteReview>
-        <MapBox />
+      <div>
+
+          <BizInfo />
+          <div styleName="container">
+          {/* <div styleName="biz-header">
+            <h1 styleName="biz-title"></h1>
+            </div>
+            <div styleName="info">
+            <div styleName="stars"></div>
+            <div styleName="price-point">
+            <span>$$</span>
+            </div>
+          </div> */}
+          <Save />
+          <Share />
+          <AddPhoto />
+          <WriteReview onClick={this.handleShow}></WriteReview>
+          <MapBox />
+        </div>
       </div>
     )
   }
 }
 
-export default App;
+// export default App;
+export default CSSModules(App, style, {allowMultiple: true});
