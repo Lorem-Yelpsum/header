@@ -14,6 +14,7 @@ db.once('open',
 const infoSchema = new Schema({
     restId: { type: Number, unique: true },
     rest_name: String,
+    claimed: Boolean,
     price_point: Number,
     category: String,
     address: {
@@ -107,6 +108,14 @@ const infoSchema = new Schema({
 
 const Info = mongoose.model('restaurant_info', infoSchema);
 
+// getData = (restIdParam, callback) => {
+//   Info.find({id: restIdParam}, (err, results) => {
+//     if (err) return console.error(err);
+//     callback(results);
+//   });
+// }
+
 module.exports = {
   Info,
+  // getData
 };

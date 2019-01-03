@@ -1,0 +1,19 @@
+.share {
+  text-align: right;
+  float: right;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px;
+  border-width: 1px;
+  border-color: #ccc;
+  border-right: none;
+  padding: 8px;
+  color: #666;
+  background-color: #f7f7f7;
+  font-weight: bold;
+  font-size: 1.0rem;
+}
+
+.share:hover {
+  background: #fffff1;
+  cursor: pointer;
+}

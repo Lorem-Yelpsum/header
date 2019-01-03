@@ -1,0 +1,35 @@
+.mapbox-container {
+  display: table-cell;
+  vertical-align: middle;
+  float: left;
+  width: 286px;
+  border: 1px solid #ccc;
+  /* z-index: 1; */
+}
+
+.mapbox-map {
+  overflow: hidden;
+  height: 135px;
+  border: 1px solid #ccc;
+  /* z-index: 3; */
+}
+
+.mapbox-text {
+  min-height: 105px;
+  /* z-index: 2; */
+}
+
+.mapbox-text ul {
+  margin: 5px;
+  /* z-index: 2; */
+}
+
+.mapbox-text li {
+  margin: 3px;
+  /* z-index: 2; */
+}
+
+.mapimg {
+  height: 135px;
+  /* z-index: 1; */
+}

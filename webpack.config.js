@@ -11,15 +11,36 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?/,
-        loader: 'babel-loader',
-        include: [
-          path.resolve(SRC_DIR)
-        ],
-        options: {
-          presets: ['react', 'es2015']
+        test: [/\.js$/, /\.jsx$/],
+        exclude: /node_modules/,
+        use:{
+            loader: "babel-loader"
         }
-      }
+    }, 
+    {
+        test: /\.css$/,
+        loader: 'style-loader'
+    }, 
+    {
+        test: /\.css$/,
+        loader: 'css-loader',
+        query: {
+          modules: true,
+          localIdentName: '[name]__[local]___[hash:base64:5]'
+        }
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader'
+    },
+    {
+      test: /\.(pdf|jpg|png|gif|svg|ico)$/,
+      use: [
+          {
+              loader: 'file-loader'
+          },
+      ]
+  }
     ]
   }
 }

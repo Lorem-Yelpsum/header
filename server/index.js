@@ -8,12 +8,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+// app.get('/', (req, res) => {
+//   res.send('Hello World!');
+// });
 
 app.get('/restaurants/:restId', (req, res) => {
-  // let restaurantId = req.params.
+  // let params = req.params.restId;
+  // db.getData(params, (results) => {
+
+  // })
   db.Info.find({restId: req.params.restId}, (err, data) => {
     if (err) throw err;
     res.send(data);
@@ -28,3 +31,8 @@ app.get('/restaurants/:restId', (req, res) => {
 
 const port = 3003;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
+<<<<<<< refs/remotes/origin/feature
+=======
+
+// module.exports = app;
+>>>>>>> local
