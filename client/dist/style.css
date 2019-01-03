@@ -1,0 +1,74 @@
+/* * {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 8px; 
+  min-height: 100vh;
+}
+
+h2 {
+  font-size: 6rem;
+  margin: 0;
+  margin-bottom: 8rem;
+  color: #fff;
+}
+
+#app-root {
+  background-color: #29DAFD;
+  min-height: 100vh;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  padding: 2rem 6rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  text-shadow: 0 0 5px #777;
+    &:hover,
+    &:active {
+    outline: 0px;
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  button {
+    margin-bottom: 2rem;
+  }
+}
+
+button.success {
+    background: #62e01b;
+}
+
+
+button.danger {
+    background: #e0431b;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: #000;
+}
+
+.modal-1 {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 5rem;
+} */

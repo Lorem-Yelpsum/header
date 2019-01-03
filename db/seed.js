@@ -12,6 +12,7 @@ let randCat = arr[Math.trunc((Math.random()*arr.length))];
 const createRestaurantInfo = () => ({
 
   rest_name: faker.company.companyName(),
+  claimed: true,
   price_point: faker.random.number({ min: 1, max: 4 }),
   category: randCat,
   address: {
