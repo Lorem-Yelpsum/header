@@ -1,5 +1,5 @@
 .writeReviewBtn {
-  text-align: right;
+  text-align: center;
   float: right;
   border-color: #8d0005;
   border-radius: 3px;
@@ -12,6 +12,8 @@
   color: white;
   font-size: 14px;
   font-weight: bold;
+  display: flex;
+  align-items: center;
 }
 
 .writeReviewBtn:hover {
