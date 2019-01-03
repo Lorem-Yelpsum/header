@@ -31,8 +31,3 @@ app.get('/restaurants/:restId', (req, res) => {
 
 const port = 3003;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
-<<<<<<< refs/remotes/origin/feature
-=======
-
-// module.exports = app;
->>>>>>> local

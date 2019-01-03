@@ -25,11 +25,8 @@
     "css-loader": "^2.1.0",
     "express": "^4.16.4",
     "faker": "^4.1.0",
-<<<<<<< refs/remotes/origin/feature
-=======
     "file-loader": "^3.0.1",
     "jest": "^23.6.0",
->>>>>>> local
     "mongodb": "^3.1.10",
     "mongoose": "^5.4.0",
     "multer": "^1.4.1",
@@ -38,15 +35,11 @@
     "react": "^16.7.0",
     "react-css-modules": "^4.7.8",
     "react-dom": "^16.7.0",
-<<<<<<< refs/remotes/origin/feature
-    "webpack": "^2.7.0"
-=======
     "react-portal": "^4.2.0",
     "request": "^2.88.0",
     "style-loader": "^0.23.1",
     "superagent": "^4.1.0",
     "supertest": "^3.3.0"
->>>>>>> local
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
