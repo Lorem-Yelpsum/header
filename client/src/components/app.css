@@ -14,14 +14,18 @@
   z-index: 1;
 }
 
-.header .biz-header .biz-title {
+.biz-title {
   display: inline;
   font-size: 36px;
   padding-top: 6px;
   z-index: 1;
 }
 
-.header .info .price-point {
+.price-point {
   padding-bottom: 6p;
   z-index: 1;
+}
+
+.biz-header {
+  
 }

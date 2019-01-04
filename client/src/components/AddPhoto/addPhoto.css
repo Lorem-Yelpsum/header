@@ -1,6 +1,6 @@
 .addPhoto {
   text-align: right;  
-  display: inline-block;
+  display: inline;
   float: right;
   border-radius: 3px;
   box-shadow: rgba(0, 0, 0, 0.1) 1px 1px;
@@ -12,6 +12,8 @@
   background-color: #f7f7f7;
   font-weight: bold;
   font-size: 1.0rem;
+  display: flex;
+  align-items: center;
 }
 
 .addPhoto:hover {
