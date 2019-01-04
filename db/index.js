@@ -108,14 +108,6 @@ const infoSchema = new Schema({
 
 const Info = mongoose.model('restaurant_info', infoSchema);
 
-// getData = (restIdParam, callback) => {
-//   Info.find({id: restIdParam}, (err, results) => {
-//     if (err) return console.error(err);
-//     callback(results);
-//   });
-// }
-
 module.exports = {
-  Info,
-  // getData
+  Info
 };

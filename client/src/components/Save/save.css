@@ -11,6 +11,8 @@
   background-color: #f7f7f7;
   font-weight: bold;
   font-size: 1.0rem;
+  display: flex;
+  align-items: center;
 }
 .save:hover {
   background: #fffff1;

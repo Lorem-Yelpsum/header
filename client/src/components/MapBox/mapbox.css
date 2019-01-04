@@ -4,32 +4,31 @@
   float: left;
   width: 286px;
   border: 1px solid #ccc;
-  /* z-index: 1; */
 }
 
 .mapbox-map {
   overflow: hidden;
   height: 135px;
   border: 1px solid #ccc;
-  /* z-index: 3; */
 }
 
 .mapbox-text {
   min-height: 105px;
-  /* z-index: 2; */
+  display: flex;
+  align-items: center;
 }
 
 .mapbox-text ul {
-  margin: 5px;
-  /* z-index: 2; */
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .mapbox-text li {
   margin: 3px;
-  /* z-index: 2; */
+  list-style-type: none;
 }
 
 .mapimg {
   height: 135px;
-  /* z-index: 1; */
 }

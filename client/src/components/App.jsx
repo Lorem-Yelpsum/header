@@ -10,9 +10,6 @@ import BizInfo from './BizInfo/BizInfo.jsx';
 import CSSModules from 'react-css-modules';
 import style from './app.css';
 
-
-
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -37,6 +34,7 @@ class App extends React.Component {
   }
 
   handleShow() {
+    console.log(this.state.biz[0].restId)
     this.setState({showModal: true});
   }
   
