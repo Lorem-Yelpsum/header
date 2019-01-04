@@ -66,3 +66,4 @@ dist
 
 client/src/components/Portal.jsx
 client/src/components/ModalController.jsx
+package-lock.json
