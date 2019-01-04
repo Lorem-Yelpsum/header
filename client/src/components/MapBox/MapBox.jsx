@@ -13,16 +13,16 @@ const MapBox = props => {
         <ul>
           <li>
             <Icon name={`18x18_marker`} height={18} width={18} fill="#666" />
-            address</li>
+            <span styleName="mapbox-icons">address</span></li>
           <li>
-            <Icon name={`18x18_directions`} height={18} width={18} fill="#666" />
-            <a href="#">Get Directions</a></li>
+            <Icon  name={`18x18_directions`} height={18} width={18} fill="#666" />
+            <a href="#"><span styleName="mapbox-icons">Get Directions</span></a></li>
           <li>
             <Icon name={`18x18_phone`} height={18} width={18} fill="#666" />
-            phone</li>
+            <span styleName="mapbox-icons">phone</span></li>
           <li>
             <Icon name={`18x18_mobile`} height={18} width={18} fill="#666" />
-            <a href="#">Send to your Phone</a></li>
+            <a href="#"><span styleName="mapbox-icons">Send to your Phone</span></a></li>
         </ul>
       </div>
     </div>
