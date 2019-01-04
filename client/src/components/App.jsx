@@ -28,13 +28,13 @@ class App extends React.Component {
       return response.json();
     }).then(data => {
       this.setState({
-        biz: data
+        biz: data[0]
       });
     });
   }
 
   handleShow() {
-    console.log(this.state.biz[0].restId)
+    console.log(this.state.biz)
     this.setState({showModal: true});
   }
   
@@ -45,23 +45,23 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div styleName="container">
 
           <BizInfo />
-          <div styleName="container">
-          {/* <div styleName="biz-header">
-            <h1 styleName="biz-title"></h1>
-            </div>
-            <div styleName="info">
-            <div styleName="stars"></div>
-            <div styleName="price-point">
-            <span>$$</span>
-            </div>
-          </div> */}
+          <div styleName="comps-container">
+            <div styleName="biz-header">
+              <h1 styleName="biz-title">Title</h1>
+
           <Save />
           <Share />
           <AddPhoto />
           <WriteReview onClick={this.handleShow}></WriteReview>
+            </div>
+            <div styleName="price-point">
+              <span>$$</span>
+            </div>
+            <br />
+          
           <MapBox />
         </div>
       </div>
