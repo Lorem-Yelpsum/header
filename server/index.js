@@ -11,12 +11,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../client/dist')));
 app.use(cors());
 
-app.get('/header/:restId', (req, res) => {
+app.get('/restaurant/:restId', (req, res) => {
   let restId = req.params.restId;
   res.status(200).send(template(restId));
 })
 
-app.get('/restaurants/:restId', (req, res) => {
+app.get('/restaurantInfo/:restId', (req, res) => {
   db.Info.find({restId: req.params.restId}, (err, data) => {
     if (err) {
       res.status(500).json({ error: "Error in server"});
