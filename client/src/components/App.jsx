@@ -22,7 +22,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    let getRoute = window.restId !== undefined ? `/restaurants/${window.restId}` : `/restaurants/1`;
+    let getRoute = window.restId !== undefined ? `/http://127.0.0.1:3003/restaurantInfo/${window.restId}` : `http://127.0.0.1:3003/restaurantInfo/1`;
     fetch(getRoute)
     .then(response => {
       return response.json();
