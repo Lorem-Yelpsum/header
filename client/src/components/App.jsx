@@ -58,7 +58,7 @@ class App extends React.Component {
           <WriteReview onClick={this.handleShow}></WriteReview>
             </div>
             <div styleName="price-point">
-              <span>$$</span>
+              <span>$$ •</span>
             </div>
             <br />
           

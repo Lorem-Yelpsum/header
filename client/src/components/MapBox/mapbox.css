@@ -33,3 +33,12 @@
 .mapimg {
   height: 135px;
 }
+
+.mapbox-icons {
+  margin-left: 10px;
+}
+
+.mapbox-text li {
+  display: flex;
+  align-items: center;
+}
