@@ -4,6 +4,7 @@
   float: left;
   width: 286px;
   border: 1px solid #ccc;
+  padding: 5px;
 }
 
 .mapbox-map {
