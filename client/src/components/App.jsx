@@ -1,5 +1,5 @@
 import React from 'react';
-import Portal from './Portal.jsx';
+// import Portal from './Portal.jsx';
 // import ModalController from './ModalController.jsx';
 import AddPhoto from './AddPhoto/AddPhoto.jsx';
 import Share from './Share/Share.jsx';
