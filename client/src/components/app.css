@@ -16,9 +16,14 @@
 
 .biz-title {
   display: inline;
-  font-size: 36px;
+  font-size: 30px;
   padding-top: 6px;
   z-index: 1;
+}
+
+.review-total {
+  font-size: 15px;
+  color: #666;
 }
 
 .price-point {
@@ -27,5 +32,4 @@
 }
 
 .biz-header {
-  
 }
